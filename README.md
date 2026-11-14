@@ -57,3 +57,10 @@ The repo must use `main` as its default branch for the automatic push trigger. N
 Use the ⚙ Settings button for four themes, alarm preferences, JSON backup and restore. Star a timer to add it to your favorite presets; select a favorite to start a fresh countdown. Drag timer cards to reorder, or use the keyboard-accessible up/down buttons. Select ✎ to edit a timer; changing its duration restarts its countdown from the new duration. Backup files preserve timers, history, Pomodoro, preferences and favorites.
 
 Run `npm test` for dependency-free Node.js regression checks. GitHub Actions runs the suite on pushes and pull requests.
+
+
+## Version 1.6 — Smart reminders
+
+Create reminders for specific local dates/times, repeating daily, every week, or on selected weekdays. Upcoming items appear in a seven-day navigable agenda. Edit, pause, or delete schedules; active or missed reminders appear in an attention list with 5, 10, or 15-minute snooze and dismiss. Reminders and their alert history are kept in localStorage and included in version 2 JSON backups; version 1 backups still import (with no schedules).
+
+**Browser limitations:** no server is involved. TaskBell schedules are evaluated while the page is running. A missed schedule (more than 60 seconds late) is recorded for review rather than ringing late. Browser/tab suspension, sleep, and closing the browser cannot guarantee background audio/notifications. Leave the app open for timely alarms. Times are interpreted in the device's current local timezone. Changes to the system timezone affect future recurring alarm calculations.
