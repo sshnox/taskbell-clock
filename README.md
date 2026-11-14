@@ -64,3 +64,12 @@ Run `npm test` for dependency-free Node.js regression checks. GitHub Actions run
 Create reminders for specific local dates/times, repeating daily, every week, or on selected weekdays. Upcoming items appear in a seven-day navigable agenda. Edit, pause, or delete schedules; active or missed reminders appear in an attention list with 5, 10, or 15-minute snooze and dismiss. Reminders and their alert history are kept in localStorage and included in version 2 JSON backups; version 1 backups still import (with no schedules).
 
 **Browser limitations:** no server is involved. TaskBell schedules are evaluated while the page is running. A missed schedule (more than 60 seconds late) is recorded for review rather than ringing late. Browser/tab suspension, sleep, and closing the browser cannot guarantee background audio/notifications. Leave the app open for timely alarms. Times are interpreted in the device's current local timezone. Changes to the system timezone affect future recurring alarm calculations.
+## Version 1.7 — Productivity analytics
+
+- Assign categories and optional projects to countdown timers; completions are categorized in history.
+- Choose the default category and project for Pomodoro focus sessions.
+- Daily and weekly goals use completed session durations; weekly goals reset Monday in local time.
+- View current streaks and breakdowns by category and project for 7/30/90 days.
+- Download filtered productivity reports as CSV.
+- Backups now use version 3, including analytics settings, while still accepting version 1 and 2 exports. Older entries appear under Other / Unassigned.
+- All data remains local to your browser; no account or backend is required.
